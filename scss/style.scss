@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*--------Google fonts--------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    .grid-conteiner {
+        display: grid; 
+        grid-template-columns: 1fr 0fr; 
+        grid-template-rows: 0.5fr auto 0fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "header header"
+          "main main"
+          "footer footer"; 
+      }
+}
+/*-------- IMPORT -------*/
+@import"transformaciones";
+@import"media";
+@import"animaciones";
+
+
+/*---VARIABLES--------*/
+$beige: #efe9e1;
+$marron: #7d4a31;
+
+/*--------HEADER/NAV--------*/
+.header {
+    background-color: $beige;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    nav ul {
+        display: flex;
+        list-style: none;
+        li {
+            margin-left: 20px;
+            margin-right: 15px;
+            a{
+                text-decoration: none;
+                color: $marron;
+            }
+        }
+    }
+}
+
+/*------MAIN-------*/
+.main{
+    background-image: url("/imagenes/fondobeige.jpeg");
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    grid-area: main;
+    .hero {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(80vh - 150px);
+        background: linear-gradient(rgba(0, 0, 0, 0.508),rgba(0, 0, 0, 0.496));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("/imagenes/hero.jpg");
+        p{
+            font-family:'Times New Roman', Times, serif;
+            font-size: 60px;
+            font-weight: 900;
+        }
+        }
+
+        .section-one{
+        h1 {
+                font-size: 50px;
+                text-align: center;
+                margin-top: 5%;
+            }
+        h2 {
+                font-size: 20px;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+        .productos h3 {
+            text-align: left;
+            margin: 20px 20px 40px 20px;
+            font-weight: bold;
+        }
+        
+        .container-fluid div {
+            display: grid;
+            grid-template-columns: repeat(3,50fr);
+            justify-content: space-around;
+            align-items:center;
+            div {
+                display: flex;
+                justify-content:space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                box-shadow: 10px 10px 32px -6px rgba(0, 0, 0, 0.75);
+                background-color: white;
+                color: black;
+                border: groove 6px $marron;
+                border-radius: 15px;
+                margin:10%;
+                padding-bottom:4%;
+                h4 {
+                    background-color: $marron;
+                    width: 100%;
+                    color: white;
+                    font-weight: 900;
+                    font-size: 25px;
+                    text-align: center;
+                }
+                img{
+                    width: 200px;
+                    height:200px;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                    background-color: green;
+                    padding: 5px;
+                    width: 50%;
+                    border-radius: 10px;
+                    font-style: italic;
+                    text-align: center;
+                    &:hover{
+                        background-color: white;
+                        color:green;
+                        }
+                }
+            }
+            
+        }
+        
+}
+
+/* --------FOOTER-------*/
+
+.footer {
+    padding: 30px;
+    background-color: $beige;
+    grid-area: footer;
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        div {
+            display: inline-block;
+            flex-direction: row;
+            h5 {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            li {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+/*--------PRODUCTOS-------*/
+.container-fluid div div h2 {
+    background-color: $marron;
+    width: 100%;
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
+}
+.footer div div h3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-size: 20px;
+    font-style: bold;
+}
+
+/*--------NOSOTROS-------*/
+.main-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/imagenes/fondobeige.jpeg");
+
+}
+.section-nos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.section-nos {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        text-align: center;
+        padding:40px;
+        h1{
+            text-align: center;
+            padding:20px;
+        }
+    }
+}
+
+/*--------CONTACTOS-------*/
+
+/*--------INICIAR SESION-------*/
+
+.form-check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+} 
+.btn{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 5px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+} 
